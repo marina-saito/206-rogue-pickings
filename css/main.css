@@ -69,7 +69,7 @@ header h1 {
 	padding: 0.6em 0;
 	width: 100%;
 	text-align: center;
-	border-bottom: 0.125em solid #77a466;;
+	border-bottom: 0.125em solid #77a466;
 }
 header h1 span {
 	color: #77a466;
@@ -182,6 +182,7 @@ header nav ul li a{
 /*The widths are in a percentage!*/
 footer {
 	/* height: 50px; */
+	width: 100%;
 	border-top: 0.1875em solid #eee;
 	margin: 0 auto;
 	clear: both;
@@ -196,4 +197,53 @@ footer span {
 	text-transform: lowercase;
 	color: #77a466;
 	font-size: 0.875em;
+}
+
+@media all and (min-width:768px) {
+    /* Tablet styles here */
+	.bottom-section {
+  	flex-direction: row;
+		align-items: flex-start;
+  }
+	.section-one,
+	.section-two,
+	.section-three {
+		width: 33.3%;
+		height: inherit;
+		float: left;
+		border-top: 1px solid #eee; */
+	}
+	.section-one,
+	.section-two {
+		padding-right: 1em;
+	}
+	.section-two,
+	.section-three {
+		padding-left: 1.2em;
+	}
+}
+
+@media all and (min-width:1200px) {
+    /* Desktop styles here */
+	header {
+		flex-flow: row nowrap;
+		justify-content: space-between;
+		width: 100%;
+	}
+	header h1 {
+		border-bottom: 0;
+		text-align: left;
+		width: 30%;
+	}
+	header nav {
+		width: 45%;
+	}
+	header nav ul {
+    display: flex;
+		flex-flow: row nowrap;
+    justify-content: space-between;
+  }
+	header nav ul li {
+		width: auto;
+	}
 }
